@@ -1,0 +1,228 @@
+
+@font-face {
+	font-family: "SMB";
+	src: url("https://res.cloudinary.com/gvissing/raw/upload/v1644262488/fonts/Super_Mario_Bros_pa5xgg.ttf")
+		format("truetype");
+	font-style: normal;
+}
+
+body {
+	height: 100vh;
+	overflow-y: hidden;
+	
+	background-color: #5393ff;
+	&:before {
+		content: "Scroll to Move";
+		font-family: "Press Start 2P", cursive;
+		animation: blinker 1.5s linear infinite;
+		animation: cursor-blink 1.5s steps(2) infinite;
+		animation-delay: 2s;
+		position: fixed;
+		top: 33%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		display: block;
+		text-align: center;
+		width: 100%; 
+		z-index: 4;
+	}
+	
+	&:after {
+		content: "";
+	width: 100%;
+		height: 50px;
+		position: fixed;
+	bottom: 0;
+		left: 0;
+		background-image: url("https://res.cloudinary.com/gvissing/image/upload/v1644332740/images/mario-ground_hwtkg3.jpg");
+		background-size: 256px;
+	 }
+}
+
+@keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#title {
+	margin: auto;
+	display: block;
+	position: fixed;
+	z-index: 10;
+	top: 10px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 650px;
+	background-color: #f1420c;
+	border: 2px solid #222;
+
+	.square {
+		content: "";
+		position: absolute;
+		width: 5px;
+		height: 5px;
+		background-color: #ffd7d0;
+		display: inline-block;
+		z-index: 5;
+		box-shadow: 3px 3px #000;
+		&.one {
+			top: 1em;
+			left: 1em;
+		}
+		&.two {
+			top: 1em;
+			right: 1em;
+		}
+		&.three {
+			bottom: 1em;
+			left: 1em;
+		}
+		&.four {
+			bottom: 1em;
+			right: 1em;
+		}
+	}
+}
+
+
+	p {
+		color: #fff;
+		text-align: center;
+		margin: auto;
+		display: block;
+		font-size: 1em;
+		padding: 1em;
+		font-family: "Press Start 2P", cursive;
+		animation: blinker 1s linear infinite;
+	}
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+	align-items: flex-end;
+  height:100vh;
+	
+			
+			&:after {
+				content: "";
+				margin: 0px;
+				padding: 0px;
+				background-repeat: no-repeat;
+				background-position: right -2px center;
+				width: 32px;
+				height: 54px;
+				position: absolute;
+				left: 0;
+				
+				top: 0;
+				bottom: -19em;
+				margin: auto;
+				z-index: 100;	
+				transform: scaleX(1);
+				animation: turtle 0.75s steps(2) infinite,
+					turtleMove 9s linear infinite;
+				background-image: url("https://res.cloudinary.com/gvissing/image/upload/v1644343764/images/turtle_ywkrdq.png");
+			}
+			
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: -14em;
+				left: 0;
+				right: 0;
+				margin: auto;
+				background-image: url("https://res.cloudinary.com/gvissing/image/upload/v1644341607/images/brick_htgv7x.png");
+				background-size: contain; 
+				width: 350px;
+				height: 50px;
+			}
+		}		
+		
+
+
+#mario {
+	margin: 0px;
+	padding: 0px;
+	background: url("https://res.cloudinary.com/gvissing/image/upload/v1644330436/images/mario-sprites_tvsflv-cropped-2_i8am78.png");
+	background-repeat: no-repeat;
+	background-position: right center;
+	width: 30px;
+	height: 40px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 50px;
+	margin: auto;
+	z-index: 100;	
+	transform: scaleX(1);
+	animation: play 0.75s steps(2) infinite;
+	
+	&.backwards {
+		transform: scaleX(-1);
+	}
+	
+	&.run {
+		animation: play 0.5s steps(2) infinite;
+	}
+}
+
+@keyframes play {
+	100% {
+		background-position: 30px;
+	}
+}
+
+@keyframes turtle {
+	100% {
+		background-position: 35px;
+	}
+}
+
+@keyframes turtleMove {
+	0% {
+		right: -300px;
+		transform: scaleX(1);
+	}
+	49.9% {
+		right: 320px;
+		transform: scaleX(1);
+	}
+	50% {
+		right: 320px;
+		transform: scaleX(-1);
+	}
+	100% {
+		transform: scaleX(-1);
+		right: -300px;
+	}
+}
+
+ &:before {
+	content: "";
+ 	width: 100%;
+	height: 50px;
+	position: fixed;
+ 	bottom: -5px;
+	left: 0;
+	background-image: url("https://res.cloudinary.com/gvissing/image/upload/v1644332740/images/mario-ground_hwtkg3.jpg");
+ 	background-size: 256px;
+ }

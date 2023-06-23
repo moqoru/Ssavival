@@ -1,0 +1,19 @@
+body {
+	background-color: black;
+}
+
+.sign {
+	padding-top: 30px;
+	text-align: center;
+	color: white;
+	font-family: sans-serif;
+}
+
+.animateMe {
+	font-size: 100px;
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	opacity: 0;
+	color: #FFD553;
+	text-shadow: 0 0 90px rgba(255, 213, 83, 1);
+}
